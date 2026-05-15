@@ -1,0 +1,26 @@
+# Fayl nomi: art.py
+import turtle
+import random
+
+# Ekranni sozlash
+screen = turtle.Screen()
+screen.bgcolor("black")
+t = turtle.Turtle()
+t.speed(0) # Eng tez tezlik
+t.width(2)
+
+# Ranglar ro'yxati
+colors = ["red", "blue", "green", "yellow", "purple", "cyan", "white"]
+
+def draw_spirograph():
+    for i in range(100):
+        t.color(random.choice(colors)) # Tasodifiy rang tanlash
+        t.circle(100) # Aylana chizish
+        t.left(10) # 10 darajaga burilish
+
+    print("San'at asari tayyor!")
+    t.hideturtle()
+    screen.exitonclick() # Ekranni bosganda yopiladi
+
+if __name__ == "__main__":
+    draw_spirograph()
